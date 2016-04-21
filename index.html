@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Webpack Demo</title>
+</head>
+<body>
+    <script>
+    // webpack.assets.js 是总的入口文件
+    document.write('<script type="text/javascript" src="./build/webpack.assets.js?v=' + (new Date().getTime()) + '"><\/script>');
+    </script>
+    <script>
+    // 必须要等 webpack.assets.js 加载完后才会有 WEBPACK_ASSETS 变量
+    document.write('<script type="text/javascript" src=".' + window.WEBPACK_ASSETS.commons.js + '"><\/script>');
+    document.write('<script type="text/javascript" src=".' + window.WEBPACK_ASSETS.index.js + '"><\/script>');
+    </script>
+</body>
+</html>
