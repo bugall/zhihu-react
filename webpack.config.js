@@ -19,10 +19,10 @@ const config = {
     },
     resolve: {
         alias: {
-            'react': 'react/dist/react.min.js',
+            //'react': 'react/dist/react.js',
             'react-dom': 'react-dom/dist/react-dom.min.js',
             'react-router': 'react-router/umd/ReactRouter.min.js',
-            'history': 'history/umd/History.min.js'
+            'history': 'history/umd/History.min.js',
         }
     },
     output: {
@@ -39,7 +39,9 @@ const config = {
         }),
         new webpack.DefinePlugin({
             __DEBUG__: true,
-            __DEV__:true
+            'process.env': {
+                'NODE_ENV': JSON.stringify("production") 
+            }
         })
     ],
     module: {

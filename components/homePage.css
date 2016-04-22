@@ -68,14 +68,20 @@
     width: 650px;
     height: inherit;
     float:right;
-    
+    position: relative;
 }
 .article-wrap .right .author{
     color: #999;
     font-size:12px;
 }
+.article-wrap .right .author span{
+    float:left;
+}
 .article-wrap .right .project{
     margin:0px 5px;
+}
+.article-wrap .right .project-wrap{
+    float:left;
 }
 .article-wrap .right .project:hover{
     text-decoration:underline;
@@ -102,6 +108,9 @@
 }
 .article-wrap .right .action:hover{
     background-color: rgba(179, 240, 239, 0.42);
+}
+.article-wrap .right .bottom-action{
+    
 }
 .wrap{
     width: 700px;

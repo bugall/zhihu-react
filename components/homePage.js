@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import commonCss from './common.css';
 import styles from './homePage.css';
 import cx from 'classnames';
+import TipsProjectCard from './common/tips/project/tips.js'
 
 const Title=React.createClass({
     getInitialState:function(){
@@ -38,6 +39,21 @@ const BottomAction=React.createClass({
     }
 })
 const ArticleSign=React.createClass({
+    getInitialState:function(){
+        return{
+            tipsShow:false
+        }
+    },
+    handleProjectHover:function(){
+        this.setState({
+            tipsShow:true
+        })
+    },
+    handleProjectOut:function(){
+        this.setState({
+            tipsShow:false
+        })
+    },
     render:function(){
         return(
             <div className={styles['article-wrap']}>
@@ -51,8 +67,12 @@ const ArticleSign=React.createClass({
                 </div>
                 <div className={styles['right']}>
                     <div className={styles['author']}>
-                        热门回答，来自
-                        <a className={styles['project']}>恋爱</a>
+                        <span>热门回答，来自</span>
+                        <div className={styles['project-wrap']} onMouseLeave={this.handleProjectOut} onMouseEnter={this.handleProjectHover}>
+                            <a className={styles['project']} >恋爱</a>
+                            
+                            <TipsProjectCard isShow={this.state.tipsShow}/>
+                        </div>
                         <a className={styles['action']}>关注话题</a>
                     </div>
                     <div>
