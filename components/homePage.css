@@ -9,6 +9,7 @@
     font-size: 13px;
     color: #666;
     font-weight: 700;
+    font-size:14px;
 }
 .title .right{
     float:right;
@@ -25,7 +26,7 @@
     background-image: url(http://7xq5ra.com2.z0.glb.qiniucdn.com/static/images/sprites-1.9.2.4c54885a.png);
     display: inline-block;
     float:left;
-    margin-top:3px;
+    margin-top:5px;
     margin-right:10px;
 }
 .title .right .icon{
@@ -37,8 +38,8 @@
     background-image: url(http://7xq5ra.com2.z0.glb.qiniucdn.com/static/images/sprites-1.9.2.4c54885a.png);
     display: inline-block;
     float:left;
-    margin-right: 10px;
-    margin-top:4px;
+    margin-right: 5px;
+    margin-top:5px;
 }
 
 .article-wrap{
@@ -65,14 +66,14 @@
     border-radius: 4px;
 }
 .article-wrap .right{
-    width: 550px;
+    width: 584px;
     height: inherit;
     float:right;
     position: relative;
 }
 .article-wrap .right .author{
     color: #999;
-    font-size:12px;
+    font-size:13px;
 }
 .article-wrap .right .author .tag{
     float:left;
@@ -93,9 +94,12 @@
 .article-wrap .right .author .action{
     color: #259;
     display: inline-block;
-    font-size: 10px;
+    font-size: 11px;
     border-radius: 3px;
     padding: 0 5px 0 2px;
+}
+.article-wrap .right .content{
+    cursor: pointer;
 }
 .article-wrap .right .author .name{
   
@@ -103,7 +107,7 @@
 .article-wrap .right .article-title{
     color: #259;
     display: inline-block;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
 }
 .article-wrap .right .article-title:hover{
@@ -116,21 +120,41 @@
     height: 30px;
     width: inherit;
     line-height: 30px;
-    margin-top:10px;    
+    color:#999;   
+    position: absolute;
 }
-.article-wrap .right .bottom-action .focus-question{
+.article-wrap .right .bottom-action .sign-icon{
     display: inline-block;
     line-height: 10px;
     vertical-align: 0;
     background-image: url(http://7xq5ra.com2.z0.glb.qiniucdn.com/static/images/sprites-1.9.2.4c54885a.png);
     background-repeat: no-repeat;
-    margin-right: 5px;
-    width: 8px;
+    margin-left: 7px;
+    width: 9px;
     height: 9px;
+}
+.article-wrap .right .bottom-action .focus-question{
+    margin-right: 5px;
+    margin-left:0px;
+    width: 8px;
     background-position: -97px -23px;
 }
+.article-wrap .right .bottom-action .comment-question{
+    background-position: -28px -22px;
+}
+.article-wrap .right .bottom-action .thanks-question{
+    width: 10px;
+    background-position: -41px -22px;
+}
+.article-wrap .right .bottom-action .share-question{
+    width: 11px;
+    background-position: -67px -22px;
+}
+.article-wrap .right .bottom-action .collection-question{
+    background-position: -56px -22px;
+}
 .wrap{
-    width: 600px;
+    width: 632px;
     float:left;
     min-height: 500px;
 }

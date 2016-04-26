@@ -28,7 +28,7 @@ const Root = function() {
             </Route>
         </Router>
     )
-};
+};  
 
 const wrap = document.createElement('div');
 document.body.appendChild(wrap);

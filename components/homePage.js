@@ -30,19 +30,43 @@ const Title=React.createClass({
 })
 
 const BottomAction=React.createClass({
+    showOptions:function(type){
+        if(type==='all'){
+            return(
+                <div key="all" className={styles['bottom-action']}>
+                    <span class=""><i className={cx(styles['sign-icon'],styles['focus-question'])}></i>关注问题</span>
+                    <span class=""><i className={cx(styles['sign-icon'],styles['comment-question'])}></i><span> 781 </span>条评论</span>
+                    <span class=""><i className={cx(styles['sign-icon'],styles['thanks-question'])}></i><span> 781 </span>感谢</span>
+                    <span class=""><i className={cx(styles['sign-icon'],styles['share-question'])}></i><span> 781 </span>分享</span>
+                    <span class=""><i className={cx(styles['sign-icon'],styles['collection-question'])}></i><span> 781 </span>收藏 • 没有帮助 • 举报 • 作者保留权利</span>
+                </div> 
+            )    
+        }else{
+            return (
+                <div key="default" className={styles['bottom-action']}>
+                    <span><i className={cx(styles['sign-icon'],styles['focus-question'])}></i>关注问题</span>
+                    <span><i className={cx(styles['sign-icon'],styles['comment-question'])}></i><span> 781 </span>条评论 • 作者保留权利</span>
+                </div>
+            )
+        }
+    },
     render: function() {
+        let self = this;
+        console.log(self.props.actionType);
         return (
-            <div className={styles['bottom-action']}>
-                <span><i className={styles['focus-question']}></i>关注问题</span>
-                <span><i></i><span> 781 </span>条评论 • 作者保留权利</span>
-            </div>
+            <ReactCSSTransitionGroup transitionName="example">
+                {
+                    self.showOptions(self.props.actionType)
+                }
+            </ReactCSSTransitionGroup>
         )
     }
 })
 const ArticleSign=React.createClass({
     getInitialState:function(){
         return{
-            tipsShow:false
+            tipsShow:false,
+            actionType:'default'
         }
     },
     handleProjectHover:function(){
@@ -53,6 +77,16 @@ const ArticleSign=React.createClass({
     handleProjectOut:function(){
         this.setState({
             tipsShow:false
+        })
+    },
+    handleContentHover:function(){
+        this.setState({
+            actionType:'all'
+        })
+    },
+    handleContentOut:function(){
+        this.setState({
+            actionType:'default'
         })
     },
     render:function(){
@@ -66,7 +100,7 @@ const ArticleSign=React.createClass({
                         <span className={commonCss['number-label']}>15k</span>
                     </div>
                 </div>
-                <div className={styles['right']}>
+                <div className={styles['right']} onMouseLeave={this.handleContentOut} onMouseEnter={this.handleContentHover}>
                     <div className={styles['author']}>
                         <span className={styles['tag']}>热门回答，来自</span>
                         <div className={styles['project-wrap']} onMouseLeave={this.handleProjectOut} onMouseEnter={this.handleProjectHover}>
@@ -81,11 +115,11 @@ const ArticleSign=React.createClass({
                     <div className={styles['name']}>
                         匿名用户
                     </div>
-                    <div className={styles['content']}>
-                    支付宝 的 基本操作是 充值，提现，支付。支付宝和商业银行的交互发生在 充值，提现 2个操作。如果，马云可以直接控制支付宝的余额，不需要通过银行，那么，他也可以提现，自己控制余额数量，不断提现就可以买下希腊，成为希腊的国王了。支付宝公司是国内首…
+                    <div className={styles['content']} >
+                        支付宝 的 基本操作是 充值，提现，支付。支付宝和商业银行的交互发生在 充值，提现 2个操作。如果，马云可以直接控制支付宝的余额，不需要通过银行，那么，他也可以提现，自己控制余额数量，不断提现就可以买下希腊，成为希腊的国王了。支付宝公司是国内首…
                     </div>
                     <div className={styles['bottom-action-wrap']}>
-                        <BottomAction/>
+                        <BottomAction actionType={this.state.actionType}/>
                     </div>                   
                 </div>
             </div>

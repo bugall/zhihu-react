@@ -2,7 +2,7 @@ body{
     margin:0px;
     padding:0px;
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.7;
     word-wrap: break-word;
     color: #222;
@@ -18,7 +18,7 @@ body{
     clear:both;
 }
 .header-wrap{
-    height: 42px;
+    height: 45px;
     width: 100%;
     position: fixed;
     background-color: #0767c8;
@@ -29,7 +29,7 @@ body{
     height: 100%;
     width: 61px;
     background-repeat: no-repeat;
-    background-position: 0 5px;
+    background-position: 0 7px;
     display: block;
     float: left;
 }
@@ -79,7 +79,8 @@ body{
     float:right;
     height:inherit;
     margin-left: 15px;
-    padding:0px 25px;
+    padding:0px 20px;
+    width:80px;
 }
 .header-nav-user-profile:hover{
     background-color:#0556A7;
@@ -99,6 +100,8 @@ body{
     line-height: 42px;
     margin-left:10px;
     color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.12);
+    font-size: 14px;
 }
 .header-nav-profile-dropdown{
     /*display: none;*/
@@ -111,14 +114,14 @@ body{
 }
 .header-nav-profile-dropdown li{
     list-style: none;
-    width: 119px;
+    width: 120px;
     height:40px;
     display: list-item;
     text-align: -webkit-match-parent;
 }
 .header-nav-profile-dropdown li a {
     display: block;
-    width: 119px;
+    width: 120px;
     height: 40px;
     line-height: 40px;
     color: #fff;
