@@ -59,7 +59,7 @@ const config = {
                 'postcss-loader'
              ]
         },{
-            test: /\.(png|jpg)$/, loader: 'url?limit=8192'
+            test: /\.(png|jpg)$/, loader: 'url-loader?limit=50000&name=images/[hash].[ext]'
         }],
         nodeParse: [
             'react/dist/react.min.js',

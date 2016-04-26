@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import styles from './navigation.css';
 import commonCss from './common.css';
 import cx from 'classnames';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const ProfileDropdown=React.createClass({
     getInitialState:function(){

@@ -18,6 +18,20 @@
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
+.base-btn{
+    display: block;
+    text-align: center;
+    min-width: 78px;
+    font-size: 12px;
+    text-decoration: none!important;
+    padding: 1px;
+    font-weight: 400;
+    line-height: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-sizing: border-box;  
+    outline:none;
+}
 .number-label{
     display: block;
     color: #698ebf;

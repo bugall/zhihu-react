@@ -11,8 +11,19 @@
     height: 0;
     border-left: 13px solid transparent;
     border-right: 13px solid transparent;
-    border-bottom: 14px solid wheat;
+    border-bottom: 14px solid #ccc;
     margin-left: 40px;
+    float:left;
+}
+.triangle-up2 {
+    width: 0;
+    height: 0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-bottom: 14px solid #fff;
+    margin-left: -26px;
+    margin-top: 1px;
+    float:left;
 }
 .tips-content{
     width: inherit;
@@ -23,30 +34,88 @@
 .tips-content .up{
     height: 110px;
     width: inherit;
-    background-color: wheat;
+    background: #fff;
     border-top-left-radius : 4px;
     border-top-right-radius : 4px;
+    border-top: solid 1px #ccc;
+    border-left: solid 1px #ccc;
+    border-right: solid 1px #ccc;
 }
 .tips-content .down{
-    height: 76px;
+    height: 46px;
     width: inherit;
-    background-color: grey;
+    background: #fafafa;
+    border-bottom: solid 1px #ccc;
+    border-left: solid 1px #ccc;
+    border-right: solid 1px #ccc;
     border-bottom-left-radius : 4px;
     border-bottom-right-radius : 4px;
+    padding:15px 0px;
 }
-/*.example-enter {
-  opacity: 0.01;
-  transition: opacity .5s ease-in;
+.tips-content .up .avatar{
+    float:left;
+    width:45px;
+    height:45px;
+    margin:10px;
+    border-radius: 4px;
 }
-
-.example-enter.example-enter-active {
-  opacity: 1;
+.tips-content .up .avatar img {
+    width: 45px;
+    height: 45px;
+    border-radius: 4px;
 }
-.example-leave {
-  opacity: 1;
-  transition: opacity .5s ease-in;
+.tips-content .description {
+    float: left;
+    position: relative;
+    width: 235px;
+    margin: 10px;
 }
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-}*/
+.tips-content .description .name{
+    font-size:13px;
+    font-weight: 700;
+    color:#259
+}
+.tips-content .description .content{
+    color:#000;
+    padding-top: 4px;
+}
+.tips-content .down a{
+    font-size: 14px;
+    font-weight: 700;
+    color:#222;
+    text-align: center;
+    text-decoration: none;
+}
+.tips-content .down a:hover{
+    color: #259;
+}
+.tips-content .down .tag{
+    display: block;
+    color:#999;
+}
+.tips-content .down a{
+    float:left;
+    padding:0px 12px;
+}
+.tips-content .down .focus-btn-wrap{
+    height: inherit;
+    padding: 5px 0px;
+    float: right;
+    margin-right: 10px;
+}
+.tips-content .down .tag-second{
+        border-right: 1px solid #eee;
+        border-left: solid 1px #eee;
+}
+.tips-content .down .focus-btn-wrap .focus-btn{
+    width: auto;
+    min-width: 78px;
+    height: 35px;
+    color: #3e5e00!important;
+    text-shadow: 0 1px 0 rgba(255,255,255,.3);
+    background: #8ab923;
+    background: -webkit-linear-gradient(top,#adda4d,#86b846);
+    background: linear-gradient(to bottom,#adda4d,#86b846);
+    border: 1px solid #6d8f29;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,0 1px 0 rgba(0,0,0,.2);
+}

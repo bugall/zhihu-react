@@ -22,7 +22,7 @@
     vertical-align: -4px;
     margin-right: 5px;
     background-position: -71px -88px;
-    background-image: url(../assets/images/icon.png);
+    background-image: url(http://7xq5ra.com2.z0.glb.qiniucdn.com/static/images/sprites-1.9.2.4c54885a.png);
     display: inline-block;
     float:left;
     margin-top:3px;
@@ -34,7 +34,7 @@
     background-position: -88px -148px;
     margin-right: 1px;
     vertical-align: -5px;
-    background-image: url(../assets/images/icon.png);
+    background-image: url(http://7xq5ra.com2.z0.glb.qiniucdn.com/static/images/sprites-1.9.2.4c54885a.png);
     display: inline-block;
     float:left;
     margin-right: 10px;
@@ -65,7 +65,7 @@
     border-radius: 4px;
 }
 .article-wrap .right{
-    width: 650px;
+    width: 550px;
     height: inherit;
     float:right;
     position: relative;
@@ -74,7 +74,7 @@
     color: #999;
     font-size:12px;
 }
-.article-wrap .right .author span{
+.article-wrap .right .author .tag{
     float:left;
 }
 .article-wrap .right .project{
@@ -97,6 +97,9 @@
     border-radius: 3px;
     padding: 0 5px 0 2px;
 }
+.article-wrap .right .author .name{
+  
+}
 .article-wrap .right .article-title{
     color: #259;
     display: inline-block;
@@ -110,10 +113,24 @@
     background-color: rgba(179, 240, 239, 0.42);
 }
 .article-wrap .right .bottom-action{
-    
+    height: 30px;
+    width: inherit;
+    line-height: 30px;
+    margin-top:10px;    
+}
+.article-wrap .right .bottom-action .focus-question{
+    display: inline-block;
+    line-height: 10px;
+    vertical-align: 0;
+    background-image: url(http://7xq5ra.com2.z0.glb.qiniucdn.com/static/images/sprites-1.9.2.4c54885a.png);
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    width: 8px;
+    height: 9px;
+    background-position: -97px -23px;
 }
 .wrap{
-    width: 700px;
+    width: 600px;
     float:left;
     min-height: 500px;
 }
